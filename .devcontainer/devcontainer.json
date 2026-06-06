@@ -1,0 +1,17 @@
+{
+  "name": "home-smart-factory-backend",
+  "image": "mcr.microsoft.com/devcontainers/java:25",
+  "features": {
+    "ghcr.io/devcontainers/features/gradle:1": {},
+    "ghcr.io/anthropics/devcontainer-features/claude-code:1.0": {}
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "vscjava.vscode-java-pack",
+        "vmware.vscode-spring-boot"
+      ]
+    }
+  },
+  "postCreateCommand": "chmod +x gradlew"
+}
