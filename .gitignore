@@ -25,6 +25,7 @@ replay_pid*
 
 # Other files to ignore
 memo.txt
+.claude/settings.local.json
 
 # Serena MCP (local dev tool)
 .serena/
