@@ -1,0 +1,40 @@
+plugins {
+    id 'java'
+    id 'checkstyle'
+    id 'com.github.spotbugs' version '6.0.27'
+}
+
+group = 'com.homesmartfactory'
+version = '0.0.1-SNAPSHOT'
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation platform('org.junit:junit-bom:5.11.4')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+    testImplementation 'org.mockito:mockito-junit-jupiter:5.15.2'
+    testImplementation 'org.assertj:assertj-core:3.27.3'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+checkstyle {
+    toolVersion = '10.21.4'
+    configFile = file('config/checkstyle/checkstyle.xml')
+}
+
+spotbugs {
+    toolVersion = '4.9.3'
+    excludeFilter = file('config/spotbugs/exclude.xml')
+}
