@@ -123,9 +123,9 @@ mkdir -p .claude/plans
 
 ---
 
-## フェーズ 5 — implement へ進む
+## フェーズ 5 — 完了報告
 
-プランを提示し、そのまま `/implement .claude/plans/{name}.plan.md` を実行する。
+以下を報告する。
 
 ```
 プランを生成しました: .claude/plans/{name}.plan.md

@@ -23,9 +23,17 @@
 hs_err_pid*
 replay_pid*
 
+# Gradle
+.gradle/
+build/
+
+# IDE
+.vscode/
+
 # Other files to ignore
 memo.txt
 .claude/settings.local.json
+/.claude/plans/
 
 # Serena MCP (local dev tool)
 .serena/
